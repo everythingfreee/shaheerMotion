@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:robobunny="http://robobunny.com">
+    <me.i38.gesture.components.MsgPreference android:title="@string/app_qq" android:summary="@string/app_qq_tip" url="mqqopensdkapi://bizAgent/qm/qr?url=http%3A%2F%2Fqm.qq.com%2Fcgi-bin%2Fqm%2Fqr%3Ffrom%3Dapp%26p%3Dandroid%26jump_from%3Dwebapi%26k%3DPLwkVeH9m-sDjVod9h-GcwbLTKOSQPem" />
+    <PreferenceCategory android:title="@string/demo">
+        <me.i38.gesture.components.MsgPreference android:title="@string/demo_hello" url="@string/demo_hello_url" />
+        <me.i38.gesture.components.MsgPreference android:title="@string/demo_unidirectional" url="@string/demo_unidirectional_url" />
+        <me.i38.gesture.components.MsgPreference android:title="@string/demo_mouse" url="@string/demo_mouse_url" />
+        <me.i38.gesture.components.MsgPreference android:title="@string/demo_auto_input" url="@string/demo_auto_input_url" />
+        <me.i38.gesture.components.MsgPreference android:title="@string/demo_off_volumn" url="@string/demo_off_volumn_url" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/faq">
+        <me.i38.gesture.components.MsgPreference android:title="@string/keep_background" url="@string/keep_background_url" />
+        <me.i38.gesture.components.MsgPreference android:title="@string/permission_obscured" tip="@string/permission_obscured_tip" />
+        <me.i38.gesture.components.MsgPreference android:title="@string/service_plus_warnning" tip="@string/service_plus_warnning_tip" />
+        <me.i38.gesture.components.MsgPreference android:title="@string/some_gestures_not_trig" tip="@string/some_gestures_not_trig_tip" />
+        <me.i38.gesture.components.MsgPreference android:title="@string/gesture_max_count" tip="@string/gesture_max_count_tip" />
+        <me.i38.gesture.components.MsgPreference android:title="@string/bg_action_trigger" tip="@string/bg_action_trigger_tip" />
+        <me.i38.gesture.components.MsgPreference android:title="@string/home_action_delay" tip="@string/home_action_delay_tip" />
+        <me.i38.gesture.components.MsgPreference android:title="@string/miui_volume" tip="@string/miui_volume_tip" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/other_apps" android:key="faq_app">
+        <me.i38.gesture.components.MsgPreference android:title="@string/frag_memory" android:key="faq_frag_memory" android:summary="@string/frag_memory_tip" url="https://x1y9.com" />
+        <me.i38.gesture.components.MsgPreference android:title="@string/phone_probe" android:key="faq_probe_probe" android:summary="@string/phone_probe_tip" url="https://x1y9.com" />
+        <me.i38.gesture.components.MsgPreference android:title="@string/battery_guard" android:summary="@string/battery_guard_tip" url="market://details?id=com.x1y9.battery" />
+        <me.i38.gesture.components.MsgPreference android:title="@string/beautify_faces" android:summary="@string/beautify_faces_tip" url="https://x1y9.com" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/other">
+        <me.i38.gesture.components.MsgPreference android:title="@string/app_icon" android:summary="Icons made by Freepik from www.flaticon.com is licensed by CC 3.0 BY" />
+        <me.i38.gesture.components.MsgPreference android:title="@string/privacy" url="@string/policy_url" />
+    </PreferenceCategory>
+</PreferenceScreen>

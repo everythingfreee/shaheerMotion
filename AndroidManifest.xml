@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:compileSdkVersion="33" android:compileSdkVersionCodename="13" package="com.shaheer.motion" platformBuildVersionCode="33" platformBuildVersionName="13">
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS"/>
+    <uses-permission android:name="android.permission.QUERY_ALL_PACKAGES"/>
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.BROADCAST_STICKY"/>
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.BLUETOOTH"/>
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN"/>
+    <uses-permission android:name="android.permission.BLUETOOTH_CONNECT"/>
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.FLASHLIGHT"/>
+    <uses-permission android:name="android.permission.REORDER_TASKS"/>
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+    <uses-permission android:name="android.permission.ACCESS_NOTIFICATION_POLICY"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_SETTINGS"/>
+    <uses-permission android:name="android.permission.WRITE_SECURE_SETTINGS"/>
+    <uses-permission android:name="android.permission.PACKAGE_USAGE_STATS"/>
+    <uses-permission android:name="android.permission.SET_VOLUME_KEY_LONG_PRESS_LISTENER"/>
+    <uses-permission android:name="com.android.vending.BILLING"/>
+    <queries>
+        <intent>
+            <action android:name="com.android.vending.billing.InAppBillingService.BIND"/>
+        </intent>
+    </queries>
+    <application android:allowBackup="true" android:icon="@drawable/icon" android:label="@string/app_name" android:name="me.i38.gesture.GestureApplication" android:requestLegacyExternalStorage="true">
+        <activity android:exported="true" android:name="me.i38.gesture.SettingActivity">
+            <intent-filter>
+                <action android:name="android.service.quicksettings.action.QS_TILE_PREFERENCES"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity android:name="me.i38.gesture.AppCustomActivity"/>
+        <activity android:name="me.i38.gesture.RobotConfigActivity"/>
+        <activity android:name="me.i38.gesture.GestureEditActivity"/>
+        <activity android:name="me.i38.gesture.GestureAxisActivity"/>
+        <activity android:exported="true" android:label="@string/select_action" android:name="me.i38.gesture.SelectActionActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.CREATE_SHORTCUT"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity android:name="me.i38.gesture.SelectMoreActivity"/>
+        <activity android:name="me.i38.gesture.SelectPlusActionActivity"/>
+        <activity android:name="me.i38.gesture.SelectAppActivity"/>
+        <activity android:name="me.i38.gesture.SelectShortcutActivity"/>
+        <activity android:name="me.i38.gesture.SelectDevtoolsActivity"/>
+        <activity android:name="me.i38.gesture.PanelEditActivity"/>
+        <activity android:name="me.i38.gesture.LabActivity"/>
+        <activity android:name="me.i38.gesture.FaqActivity"/>
+        <activity android:name="me.i38.gesture.RobotEditActivity"/>
+        <activity android:excludeFromRecents="true" android:exported="true" android:launchMode="singleInstance" android:name="me.i38.gesture.ShortcutActivity" android:theme="@style/Trans"/>
+        <activity android:excludeFromRecents="true" android:launchMode="singleInstance" android:name="me.i38.gesture.IMEActivity" android:theme="@style/Trans"/>
+        <activity android:excludeFromRecents="true" android:launchMode="singleInstance" android:name="me.i38.gesture.ProxyActivity" android:theme="@style/Trans"/>
+        <activity android:name="me.i38.gesture.PayActivity"/>
+        <service android:exported="true" android:icon="@drawable/switcher" android:label="@string/app_name" android:name="me.i38.gesture.QuickSwitch" android:permission="android.permission.BIND_QUICK_SETTINGS_TILE">
+            <intent-filter>
+                <action android:name="android.service.quicksettings.action.QS_TILE"/>
+            </intent-filter>
+        </service>
+        <service android:exported="true" android:label="@string/service_main" android:name="me.i38.gesture.ServiceMain" android:permission="android.permission.BIND_ACCESSIBILITY_SERVICE" android:stopWithTask="false">
+            <intent-filter>
+                <action android:name="android.accessibilityservice.AccessibilityService"/>
+            </intent-filter>
+            <meta-data android:name="android.accessibilityservice" android:resource="@xml/service_main"/>
+        </service>
+        <service android:exported="true" android:label="@string/service_plus" android:name="me.i38.gesture.ServicePlus" android:permission="android.permission.BIND_ACCESSIBILITY_SERVICE" android:stopWithTask="false">
+            <intent-filter>
+                <action android:name="android.accessibilityservice.AccessibilityService"/>
+            </intent-filter>
+            <meta-data android:name="android.accessibilityservice" android:resource="@xml/service_plus"/>
+        </service>
+        <service android:exported="true" android:foregroundServiceType="mediaProjection" android:name="me.i38.gesture.GestureExtraService"/>
+        <service android:exported="true" android:name="me.i38.gesture.BeautifySwitchService"/>
+        <service android:exported="true" android:name="me.i38.gesture.BeautifyActionService">
+            <intent-filter>
+                <action android:name="com.x1y9.beautify"/>
+            </intent-filter>
+            <meta-data android:name="meta" android:value="@string/beautify_actions_meta"/>
+        </service>
+        <meta-data android:name="com.google.android.play.billingclient.version" android:value="1.2.0"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize" android:exported="false" android:name="com.android.billingclient.api.ProxyBillingActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+    </application>
+</manifest>

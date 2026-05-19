@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Full‑screen image background (no rotation, crop to fill) -->
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@mipmap/developerimage_round" />
+
+    <!-- Dark overlay to create a "blur" feel and improve text contrast -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#80000000" />
+
+    <!-- Scrollable content with all original views + improved styles -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- free_expired_tip -->
+            <TextView
+                android:id="@id/free_expired_tip"
+                android:layout_width="389dp"
+                android:layout_height="wrap_content"
+                android:padding="16.0dp"
+                android:text="@string/pay_action_count"
+                android:textAlignment="center"
+                android:textColor="#ffff"
+                android:textSize="28.0sp"
+                android:textStyle="bold" />
+            <!-- pay_redeem button -->
+
+
+            <!-- pay_alipay_desc -->
+            <TextView
+                android:id="@id/pay_alipay_desc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="30sp"
+                android:textColor="#FFFFFF"
+                android:shadowColor="#000000"
+                android:shadowDx="1"
+                android:shadowDy="1"
+                android:textAlignment="center"
+                android:shadowRadius="3"
+                android:padding="12dp"
+                android:text="@string/pay_alipay_desc"
+                android:textStyle="bold" />
+
+            <!-- Row: Alipay button + Device ID -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp"
+                android:gravity="center_vertical">
+
+                <Button
+                    android:id="@id/pay_alipay"
+                    android:layout_width="372dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:background="#03A9F4"
+                    android:padding="12dp"
+                    android:text="@string/pay_alipay"
+                    android:textAlignment="center"
+                    android:textColor="#FFFFFF"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+
+
+            </LinearLayout>
+
+            <!-- pay_key_tip -->
+
+            <!-- pay_key EditText -->
+
+            <!-- pay_bind button -->
+
+            <!-- pay_unbind button -->
+
+            <!-- Optional contact TextView from your new design (won't crash if not used) -->
+            <TextView
+                android:id="@+id/contact"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:autoLink="web"
+                android:padding="12dp"
+                android:shadowColor="#000000"
+                android:shadowDx="1"
+                android:shadowDy="1"
+                android:shadowRadius="3"
+                android:text="@string/contact_text"
+                android:textAlignment="center"
+                android:textColor="#FFFFFF"
+                android:textColorLink="#2196F3"
+                android:textSize="28sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </ScrollView>
+</FrameLayout>

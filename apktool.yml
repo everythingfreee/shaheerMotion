@@ -1,0 +1,18 @@
+version: 3.0.2
+apkFileName: base.apk
+usesFramework:
+  ids:
+  - 1
+sdkInfo:
+  minSdkVersion: 21
+  targetSdkVersion: 33
+versionInfo:
+  versionCode: 50707
+  versionName: 5.7.7
+resourcesInfo:
+  packageId: 127
+doNotCompress:
+- arsc
+- jpg
+- png
+- assets/robots.json
